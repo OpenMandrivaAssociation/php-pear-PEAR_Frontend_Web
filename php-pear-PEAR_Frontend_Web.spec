@@ -5,7 +5,7 @@
 
 Summary:	%{_pearname} - HTML (Web) PEAR package manager
 Name:		php-pear-%{_pearname}
-Version:	0.5.1
+Version:	0.5.2
 Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
