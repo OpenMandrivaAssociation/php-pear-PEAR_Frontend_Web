@@ -49,14 +49,16 @@ mv package.xml~ package.xml
 rm -rf %{buildroot}
 
 install -d %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
+install -d %{buildroot}%{_datadir}/pear/data/%{_pearname}/data/{images,templates}
 
-install %{_pearname}-%{version}/WebInstaller.php %{buildroot}%{_datadir}/pear/%{_class}/
-install %{_pearname}-%{version}/%{_subclass}/Web.php %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}
-install %{_pearname}-%{version}/%{_subclass}/Web/*.png %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
-install %{_pearname}-%{version}/%{_subclass}/Web/*.gif %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
-install %{_pearname}-%{version}/%{_subclass}/Web/*.html %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
-install %{_pearname}-%{version}/%{_subclass}/Web/*.css %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
-install %{_pearname}-%{version}/%{_subclass}/Web/*.js %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
+install %{_pearname}-%{version}/pearfrontendweb.php %{buildroot}%{_datadir}/pear/%{_class}/
+install %{_pearname}-%{version}/%{_subclass}/*.php %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/%{_subclass}/Web/*.php %{buildroot}%{_datadir}/pear/%{_class}/%{_subclass}/Web
+
+install %{_pearname}-%{version}/data/*.js %{buildroot}%{_datadir}/pear/data/%{_pearname}/data/
+install %{_pearname}-%{version}/data/*.css %{buildroot}%{_datadir}/pear/data/%{_pearname}/data/
+install %{_pearname}-%{version}/data/images/* %{buildroot}%{_datadir}/pear/data/%{_pearname}/data/images/
+install %{_pearname}-%{version}/data/templates/* %{buildroot}%{_datadir}/pear/data/%{_pearname}/data/templates/
 
 install -d %{buildroot}%{_datadir}/pear/packages
 install -m0644 package.xml %{buildroot}%{_datadir}/pear/packages/%{_pearname}.xml
@@ -85,15 +87,10 @@ rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/docs/*
+%doc %{_pearname}-%{version}/docs/* %{_pearname}-%{version}/README
 %dir %{_datadir}/pear/%{_class}/%{_subclass}/Web
 %{_datadir}/pear/%{_class}/*.php
 %{_datadir}/pear/%{_class}/%{_subclass}/*.php
-%{_datadir}/pear/%{_class}/%{_subclass}/Web/*.png
-%{_datadir}/pear/%{_class}/%{_subclass}/Web/*.gif
-%{_datadir}/pear/%{_class}/%{_subclass}/Web/*.html
-%{_datadir}/pear/%{_class}/%{_subclass}/Web/*.css
-%{_datadir}/pear/%{_class}/%{_subclass}/Web/*.js
+%{_datadir}/pear/%{_class}/%{_subclass}/Web/*.php
 %{_datadir}/pear/packages/%{_pearname}.xml
-
-
+%{_datadir}/pear/data/%{_pearname}/data
