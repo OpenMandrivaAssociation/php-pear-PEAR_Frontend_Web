@@ -18,7 +18,6 @@ Provides:	pear(Frontend)
 BuildArch:	noarch
 BuildRequires:	dos2unix
 BuildRequires:	recode
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Web interface to the PEAR package manager. Needed only when you want
