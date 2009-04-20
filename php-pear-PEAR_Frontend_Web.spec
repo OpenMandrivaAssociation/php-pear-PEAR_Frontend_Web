@@ -1,6 +1,6 @@
 %define		_class		PEAR
 %define		_subclass	Frontend
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}_Web
 
 Summary:	%{_pearname} - HTML (Web) PEAR package manager
