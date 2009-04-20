@@ -5,11 +5,11 @@
 
 Summary:	%{_pearname} - HTML (Web) PEAR package manager
 Name:		php-pear-%{_pearname}
-Version:	0.7.0
-Release:	%mkrel 3
+Version:	0.7.3
+Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/PEAR_Frontend_Web/
 Requires(post): php-pear
 Requires(preun): php-pear
