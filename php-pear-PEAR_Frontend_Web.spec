@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	0.7.4
-Release:	6
+Release:	7
 Summary:	HTML (Web) PEAR package manager
 License:	PHP License
 Group:		Development/PHP
